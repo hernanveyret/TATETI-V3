@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css" />
+    <title>TaTeTi</title>
+   
+</head>
+<body>
+    <header>
+        <!-- <P class="menu" id="menuOculto">MENU</P> -->
+        <img src="img/menu.png" alt="menu" class="menuOculto" />
+        <h1>TA-TE-TI</h1>
+        <span class="contenedorCopa"><img src="img/copa.png" alt="Imagen de la copa" class="copa" /><p id="puntuacion">PUNTUACION MAXIMA</p></span>
+    </header>
+    <main>
+        <div class="jugadores">
+            <div class="panelJugadores" id="jugadorX">
+                <p id="nombreX">JUGADO X</p>
+                <img src="img/x.png" alt="Imagen x" style="width: 80%"/>
+            </div>
+            <div class="panelJugadores">
+                <img src="img/flechai.png" alt="Flecha seleccion de jugador" id="flecha" style="width: 75%"/>
+            </div>
+            <div class="panelJugadores" id="jugadorO">
+                <p id="nombreX">JUGADO O</p>
+                <img src="img/o.png" alt="Imagen o" style="width: 80%"/>
+            </div>
+        </div>
+        <div class="tablero">
+            <span class="casilleros"><div class="cuadro" id="a1" data-cua1="a1"></div></span>
+            <span class="casilleros"><div class="cuadro" id="a2" data-cua1="a2"></div></span>
+            <span class="casilleros"><div class="cuadro" id="a3" data-cua1="a3"></div></span>
+ 
+            <span class="casilleros"><div class="cuadro" id="b1" data-cua1="b1"></div></span>
+            <span class="casilleros"><div class="cuadro" id="b2" data-cua1="b2"></div></span>
+            <span class="casilleros"><div class="cuadro" id="b3" data-cua1="b3"></div></span>
+ 
+            <span class="casilleros"><div class="cuadro" id="c1" data-cua1="c1"></div></span>
+            <span class="casilleros"><div class="cuadro" id="c2" data-cua1="c2"></div></span>
+            <span class="casilleros"><div class="cuadro" id="c3" data-cua1="c3"></div></span>
+        </div>
+    </main>
+    <footer>
+        <p>Hecho por Hernan Luis Veyret - 2023 - v3</p>
+    </footer>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css" />
+    <title>TaTeTi</title>
+   
+</head>
+<body>
+    <header>
+        <div class="contenedorMovile">
+        <img src="img/menuico.png" alt="menu" class="menuOculto" />
+        <div class="menuSlider">
+            <button onclick="juegoNuevo()">NUEVO</button>
+            <button onclick="finalizarJuego()">FINALIZAR</button>
+        </div>
+        </div>
+        <nav>
+            <button onclick="juegoNuevo()" class="btn">NUEVO</button>
+            <button onclick="finalizarJuego()" class="btn">FINALIZAR</button>
+        </nav>
+        <h1>TA-TE-TI</h1>
+        <span class="contenedorCopa"><img src="img/copa.png" alt="Imagen de la copa" class="copa" /><p id="puntuacion"></p></span>
+    </header>
+
+    <div class="contenedorFormulario" id="formularioContenedor">
+        <div class="formulario">
+            <div class="barra" id="cssjugador">JUGADOR X</div>
+            <div class="barra"><input type="text" name="nombreO" id="nombreX" class="inputForm" placeholder="Ingrese su nombre"/></div>
+            <div class="barra" id="cssjugador">JUGADOR O</div>
+            <div class="barra"><input type="text" name="nombreO" id="nombreO" class="inputForm" placeholder="Ingrese su nombre"/></div>
+            <div class="barra"><button class="btn-btn" onclick="jugar()">JUGAR</button></div>
+        </div>
+    </div>
+
+    <main>
+        <div class="jugadores">
+            <div class="panelJugadores" id="jugadorX">
+                <p id="nombreXX">JUGADOR</p>
+                <img src="img/x.png" alt="Imagen x"  class="fichas"/>
+                <p id="puntosX">0</p>
+            </div>
+            <div class="panelJugadores">
+                <img src="img/flechai.png" alt="Flecha seleccion de jugador" id="flecha" style="width: 75%"/>
+            </div>
+            <div class="panelJugadores" id="jugadorO">
+                <p id="nombreOO">JUGADOR</p>
+                <img src="img/o.png" alt="Imagen o" class="fichas"/>
+                <p id="puntosO">0</p>
+            </div>
+        </div>
+        <div class="tablero">
+            <span class="casilleros"><div class="cuadro" id="a1" data-cua1="a1"></div></span>
+            <span class="casilleros"><div class="cuadro" id="a2" data-cua1="a2"></div></span>
+            <span class="casilleros"><div class="cuadro" id="a3" data-cua1="a3"></div></span>
+ 
+            <span class="casilleros"><div class="cuadro" id="b1" data-cua1="b1"></div></span>
+            <span class="casilleros"><div class="cuadro" id="b2" data-cua1="b2"></div></span>
+            <span class="casilleros"><div class="cuadro" id="b3" data-cua1="b3"></div></span>
+ 
+            <span class="casilleros"><div class="cuadro" id="c1" data-cua1="c1"></div></span>
+            <span class="casilleros"><div class="cuadro" id="c2" data-cua1="c2"></div></span>
+            <span class="casilleros"><div class="cuadro" id="c3" data-cua1="c3"></div></span>
+        </div>
+    </main>
+    <!--CARTEL MUESTRA CUANDO SE FINALIZA UN JUEGO Y MUESTRA QUIEN GANO-->
+    <div class="finalizarJuego">
+        <div class="cartelFinalizarJuego">
+            <div class="barra" id="cssganador">GANADOR</div>
+            <div class="barra" id="nombreGanador"></div>
+            <div class="barra" id="puntosGanador"></div>
+            <div class="barra"><button class="btn-btn-cerrar" onclick="ocultarCartel()">CERRAR</button></div>
+        </div>
+    </div>
+
+    <!--CARTEL MUESTRA SI ALGUN JUGADOR TIENE UN NUEVO RECORD-->
+    <div class="contenedorRecord">
+        <div class="nuevoRecord">
+            <div class="barra" id="nuevoR">NUEVO RECORD</div>
+            <div class="barraImg"><img src="img/copa.png" alt="copa ganador" /></div>
+            <div class="barra" id="nombre"></div>
+            <div class="barra" id="puntos"></div>
+            <div class="barra"><button onclick="juegoNuevo()" class="btn-btn-finalizar">FINALIZAR</button></div>  
+        </div>
+    </div>
+    <footer>
+        <p>Hecho por Hernan Luis Veyret - 2023 - v3</p>
+    </footer>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+</html>
